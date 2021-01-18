@@ -20,7 +20,10 @@ const Modal = React.memo(
     );
   },
   (prevProps, nextProps) => {
-    return prevProps.show === nextProps.show;
+    return (
+      prevProps.show === nextProps.show &&
+      prevProps.children === nextProps.children
+    );
   }
 );
 
